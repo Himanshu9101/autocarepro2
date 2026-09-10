@@ -1,0 +1,10 @@
+const express=require("express");
+const router=express.Router();
+const c=require("../controllers/serviceController");
+const {protect,allowRoles}=require("../middleware/authMiddleware");
+router.get("/",c.get);
+router.get("/all",protect,allowRoles("admin"),c.getAll);
+router.post("/",protect,allowRoles("admin"),c.add);
+router.put("/:id",protect,allowRoles("admin"),c.update);
+router.delete("/:id",protect,allowRoles("admin"),c.remove);
+module.exports=router;

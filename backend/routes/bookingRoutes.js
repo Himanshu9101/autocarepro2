@@ -1,0 +1,13 @@
+const express=require("express");
+const router=express.Router();
+const c=require("../controllers/bookingController");
+const {protect,allowRoles}=require("../middleware/authMiddleware");
+router.post("/",protect,allowRoles("customer"),c.create);
+router.get("/my",protect,allowRoles("customer"),c.mine);
+router.get("/assigned",protect,allowRoles("mechanic"),c.assigned);
+router.get("/",protect,allowRoles("admin"),c.all);
+router.get("/:id",protect,c.one);
+router.patch("/:id/status",protect,allowRoles("admin","mechanic"),c.updateStatus);
+router.patch("/:id/mechanic",protect,allowRoles("admin"),c.assign);
+router.delete("/:id",protect,allowRoles("admin"),c.remove);
+module.exports=router;
