@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages | AutoCare Pro</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/messages.css">
+</head>
+
+<body>
+  <header class="navbar"><a href="../index.html" class="logo">AutoCare <span>Pro</span></a>
+    <nav class="nav-links"><a href="dashboard.html">Dashboard</a><a href="users.html">Users</a>
+      <a href="mechanics.html">Mechanics</a>
+      <a href="vehicles.html">Vehicles</a>
+      <a href="services.html">Services</a>
+      <a href="bookings.html">Bookings</a>
+      <a href="messages.html" class="active">Messages</a>
+    </nav>
+    <button class="login-btn" onclick="logout()">Logout</button>
+  </header>
+  <main class="messages-page">
+    <div class="page-heading">
+      <div>
+        <h1>Contact Messages</h1>
+        <p>Messages submitted through the Contact Us page.</p>
+      </div>
+    </div>
+    <section class="messages-card">
+      <div class="messages-table-wrapper">
+        <table class="messages-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Subject</th>
+              <th>Message</th>
+              <th>Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="messageContainer">
+            <tr>
+              <td colspan="7" class="loading-message">Loading messages...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="../js/main.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+
+</html>

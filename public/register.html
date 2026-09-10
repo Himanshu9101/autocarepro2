@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+  <title>Register | AutoCare Pro</title>
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/auth.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="css/mobile-tablet-pubile-resp.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html"><i class="fa-solid fa-car-side"></i>AutoCare
+      <span>Pro</span>
+    </a>
+    <a class="nav-links" href="index.html">← Back to Home</a>
+  </header>
+  <main class="auth-wrapper">
+    <section class="auth-card register-card">
+      <div class="auth-header">
+        <div class="icon"><i class="fa-solid fa-user-plus"></i></div>
+        <h1>Create Account</h1>
+        <p>Register to get started with AutoCare Pro</p>
+      </div>
+      <form id="registerForm">
+        <div class="form-group"><label>Full Name</label>
+          <div class="input-wrapper">
+            <i class="fa-regular fa-user input-icon"></i>
+            <input id="name" placeholder="Enter your full name" required="" type="text" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <div class="input-wrapper">
+            <i class="fa-regular fa-envelope input-icon"></i>
+            <input id="email" placeholder="Enter your email address" required="" type="email" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-phone input-icon"></i>
+            <input id="phone" type="tel" pattern="[0-9]{9,10}" minlength="9" maxlength="10" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)" value="" placeholder="Enter your number.."/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-lock input-icon"></i>
+            <input id="password" placeholder="Create a password" required="" minlength="8" type="password" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Confirm Password</label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-lock input-icon"></i>
+            <input id="confirmPassword" placeholder="Confirm your password" required="" minlength="8" type="password" />
+          </div>
+        </div>
+        <div class="checkbox-row">
+          <input required="" type="checkbox" />
+          <label>I agree to the <a href="#">Terms &amp;
+              Conditions</a> and <a href="#">Privacy Policy</a>.
+          </label>
+        </div>
+        <button class="submit-btn">Register</button>
+      </form>
+      <p class="bottom-text">Already have an account? <a href="login.html">Login</a></p>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+  <title>My Profile | AutoCare Pro</title>
+  <link href="../css/style.css" rel="stylesheet" />
+  <link href="../css/dashboard.css" rel="stylesheet" />
+  <link href="../css/responsive.css" rel="stylesheet" />
+  <link href="../css/customer-mechanic.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="navbar">
+    <a class="logo" href="../index.html">
+      <i class="fa-solid fa-car-side"></i>AutoCare <span>Pro</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle">
+      ☰
+    </button>
+    <nav id="navLinks" class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="vehicles.html">My Vehicles</a>
+      <a href="book-service.html">Book Service</a>
+      <a href="bookings.html">My Bookings</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+    <a class="login-btn" href="../index.html" onclick="logout();">Logout</a>
+  </header>
+  <main class="dashboard-page">
+    <div class="dashboard-container">
+      <div class="dashboard-header">
+        <div>
+          <h1>My Profile</h1>
+          <p>Update your account information.</p>
+        </div>
+      </div>
+      <div class="panel form-card">
+        <form id="profileForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input id="name" type="text" value="Himanshu Mhatre" />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input id="email" type="email" value="himanshu@gmail.com" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input id="phone" type="tel" pattern="[0-9]{9,10}" minlength="9" maxlength="10" inputmode="numeric"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)" value="" />
+            </div>
+          </div>
+          <button class="dashboard-btn" type="submit">Save Changes</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="../js/main.js"></script>
+  <script src="../js/customer.js"></script>
+</body>
+
+</html>

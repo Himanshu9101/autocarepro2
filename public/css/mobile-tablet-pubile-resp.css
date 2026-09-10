@@ -1,0 +1,250 @@
+
+
+@media (max-width: 740px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    height: auto;
+    min-height: 65px;
+
+    padding: 12px 5%;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav-links {
+    order: 3;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+
+    gap: 18px;
+
+    margin-top: 8px;
+
+    overflow-x: auto;
+    white-space: nowrap;
+
+    padding-bottom: 5px;
+  }
+
+  .nav-links a {
+    flex: 0 0 auto;
+    font-size: 13px;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  .login-btn,
+  .register-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: auto;
+
+    padding: 55px 6% 65px;
+
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    align-items: stretch;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section {
+    padding: 45px 5%;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .section-title h2 {
+    font-size: 26px;
+  }
+
+  .section-title p {
+    font-size: 14px;
+  }
+
+  .services-grid,
+  .features-grid,
+  .why-us-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .service-card,
+  .feature-card,
+  .why-card {
+    padding: 22px 18px;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+
+    padding: 0;
+  }
+
+  .about-content h1 {
+    font-size: 28px;
+  }
+
+  .about-content h2 {
+    font-size: 22px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .services-page {
+    padding: 40px 5%;
+  }
+
+  .services-page h1 {
+    font-size: 28px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    padding: 40px 5%;
+  }
+
+  .contact-info h1 {
+    font-size: 28px;
+  }
+
+  .contact-form {
+    padding: 22px 18px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+    padding: 11px;
+  }
+
+  .contact-form button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .auth-page {
+    padding: 30px 15px;
+  }
+
+  .auth-container {
+    width: 100%;
+    padding: 28px 20px;
+  }
+
+  .auth-container h1 {
+    font-size: 26px;
+  }
+
+  .auth-container p {
+    font-size: 14px;
+  }
+
+  .auth-form input {
+    padding: 11px;
+    font-size: 14px;
+  }
+
+  .auth-form button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  footer {
+    padding: 35px 5%;
+    text-align: center;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .section-title h2 {
+    font-size: 23px;
+  }
+
+  .auth-container {
+    padding: 22px 15px;
+  }
+
+  .contact-info h1,
+  .services-page h1,
+  .about-content h1 {
+    font-size: 25px;
+  }
+}

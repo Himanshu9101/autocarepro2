@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+  <title>Mechanic Dashboard | AutoCare Pro</title>
+  <link href="../css/style.css" rel="stylesheet" />
+  <link href="../css/dashboard.css" rel="stylesheet" />
+  <link href="../css/responsive.css" rel="stylesheet" />
+  <link href="../css/customer-mechanic.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="navbar">
+    <a class="logo" href="../index.html">
+      <i class="fa-solid fa-car-side"></i>AutoCare
+      <span>Pro</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle">
+      ☰
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="assigned-jobs.html">Assigned Jobs</a>
+
+    </nav>
+    <a class="login-btn" href="../index.html" onclick="logout();">Logout</a>
+  </header>
+  <main class="dashboard-page">
+    <div class="dashboard-container">
+      <div class="dashboard-header">
+        <div>
+          <h1>Welcome, Amit 👋</h1>
+          <p>Here are your assigned jobs.</p>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat-card"><a href="assigned-jobs.html"><strong>5</strong><span>Assigned Jobs</span></a></div>
+        <div class="stat-card"><strong>2</strong><span>In Progress</span></div>
+        <div class="stat-card"><strong>1</strong><span>Completed Today</span></div>
+        <div class="stat-card"><strong>2</strong><span>Pending</span></div>
+      </div>
+      <div class="panel table-wrap">
+        <div class="panel-title">
+          <h2>Today's Jobs</h2><a href="assigned-jobs.html">View All</a>
+        </div>
+        <table class="data-table">
+          <tr>
+            <th>Booking ID</th>
+            <th>Vehicle</th>
+            <th>Vehicle No.</th>
+            <th>Service</th>
+            <th>Time</th>
+            <th>Status</th>
+          </tr>
+          <tr>
+
+          </tr>
+          <tr>
+
+          </tr>
+        </table>
+      </div>
+    </div>
+  </main>
+  <script src="../js/main.js"></script>
+  <script src="../js/mechanic.js"></script>
+</body>
+
+</html>

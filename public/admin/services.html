@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+  <title>Manage Services | AutoCare Pro</title>
+  <link href="../css/style.css" rel="stylesheet" />
+  <link href="../css/dashboard.css" rel="stylesheet" />
+  <link href="../css/responsive.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="navbar">
+    <a class="logo" href="../index.html">
+      <i class="fa-solid fa-car-side"></i>AutoCare
+      <span>Pro</span>
+    </a>
+    <nav class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="users.html">Users</a>
+      <a href="mechanics.html">Mechanics</a>
+      <a href="vehicles.html">Vehicles</a>
+      <a href="services.html">Services</a>
+      <a href="bookings.html">Bookings</a><a href="messages.html">Messages</a>
+    </nav>
+    <a class="login-btn" href="../index.html" onclick="logout();">Logout</a>
+  </header>
+  <main class="dashboard-page">
+    <div class="dashboard-container">
+      <div class="dashboard-header">
+        <div>
+          <h1>Manage Services</h1>
+          <p>Add, edit and remove service types.</p>
+        </div><a class="dashboard-btn" href="add-service.html">+ Add Service</a>
+      </div>
+      <div class="search-cont">
+        <form>
+          <input type="text" id="search-input" maxlength="50" placeholder="Search service...">
+
+          <button type="submit" id="search-btn">
+            Search
+          </button>
+        </form>
+      </div>
+      <div class="panel table-wrap">
+        <table class="data-table">
+          <tr>
+            <th>ID</th>
+            <th>Service Name</th>
+            <th>Description</th>
+            <th>Price (₹)</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+          <tbody id="serviceContainer">
+            <tr>
+              <td colspan="6">Loading services...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <script src="../js/main.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+
+</html>

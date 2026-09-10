@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Add Service | AutoCare Pro</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/service-form.css">
+</head>
+
+<body>
+  <header class="navbar"><a class="logo" href="../index.html">AutoCare <span>Pro</span></a>
+    <nav class="nav-links"><a href="dashboard.html">Dashboard</a><a href="users.html">Users</a><a
+        href="vehicles.html">Vehicles</a><a href="services.html">Services</a><a href="bookings.html">Bookings</a><a
+        href="messages.html">Messages</a></nav>
+    <a class="login-btn" href="../index.html" onclick="logout()">Logout</a>
+  </header>
+  <main class="service-page">
+    <div class="service-form-container">
+      <div class="service-page-header">
+        <h1>Add Service</h1>
+        <p>Add a new service to AutoCare Pro.</p>
+      </div>
+      <div class="service-form-card">
+        <form id="serviceForm">
+          <div class="service-form-group"><label>Service Name</label><input id="serviceName" required></div>
+          <div class="service-form-group"><label>Description</label><textarea id="description"></textarea></div>
+          <div class="service-form-group"><label>Price</label><input id="price" type="number" min="0" required></div>
+          <div class="service-form-group"><label>Status</label><select id="status">
+              <option value="active">Active</option>
+              <option value="inactive">Inactive</option>
+            </select></div>
+          <button class="service-submit" type="submit">Add Service</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="../js/main.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+
+</html>

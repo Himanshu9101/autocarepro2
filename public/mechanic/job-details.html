@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+  <title>Job Details | AutoCare Pro</title>
+  <link href="../css/style.css" rel="stylesheet" />
+  <link href="../css/dashboard.css" rel="stylesheet" />
+  <link href="../css/responsive.css" rel="stylesheet" />
+  <link href="../css/customer-mechanic.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="navbar">
+    <a class="logo" href="../index.html">
+      <i class="fa-solid fa-car-side"></i>AutoCare<span>Pro</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle">
+      ☰
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="assigned-jobs.html">Assigned Jobs</a>
+    </nav>
+    <a class="login-btn" href="../index.html" onclick="logout();">Logout</a>
+  </header>
+  <main class="dashboard-page">
+    <div class="dashboard-container">
+      <div class="dashboard-header">
+        <div>
+          <h1>Job Details</h1>
+          <p>View and update the selected service job.</p>
+        </div><a class="small-btn" href="assigned-jobs.html">← Back to Jobs</a>
+      </div>
+      <div class="two-column">
+        <div class="panel">
+          <h2>Job Information</h2>
+          <img id="vehicleImage" class="job-vehicle-image" src="../assets/images/car.png" alt="Vehicle">
+          <div class="detail-row"><span>Booking ID</span><strong id="bookingId">-</strong></div>
+          <div class="detail-row"><span>Vehicle</span><strong id="vehicle">-</strong></div>
+          <div class="detail-row"><span>Customer</span><strong id="customer">-</strong></div>
+          <div class="detail-row"><span>Service</span><strong id="service">-</strong></div>
+          <div class="detail-row"><span>Date &amp; Time</span><strong id="date">-</strong></div>
+        </div>
+        <div class="panel form-card">
+          <h2>Update Progress</h2>
+          <form id="jobForm">
+            <div class="form-group">
+              <label class="job-details-status">Status</label>
+              <select id="status" class="job-details-status-select">
+                <option>In Progress</option>
+                <option>Completed</option>
+                <option>Pending</option>
+              </select>
+            </div>
+            <button class="dashboard-btn" id="job-details-btn" type="submit">Update Job</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="../js/main.js"></script>
+  <script src="../js/mechanic.js"></script>
+</body>
+
+</html>

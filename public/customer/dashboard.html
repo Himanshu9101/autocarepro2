@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+  <title>Customer Dashboard | AutoCare Pro</title>
+  <link href="../css/style.css" rel="stylesheet" />
+  <link href="../css/dashboard.css" rel="stylesheet" />
+  <link href="../css/responsive.css" rel="stylesheet" />
+  <link href="../css/customer-mechanic.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="navbar">
+    <a class="logo" href="../index.html">
+      <i class="fa-solid fa-car-side"></i>AutoCare <span>Pro</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle">
+      ☰
+    </button>
+    <nav id="navLinks" class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="vehicles.html">My Vehicles</a>
+      <a href="book-service.html">Book Service</a>
+      <a href="bookings.html">My Bookings</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+    <a class="login-btn" href="../index.html" onclick="logout();">Logout</a>
+  </header>
+  <main class="dashboard-page">
+    <div class="dashboard-container">
+      <div class="dashboard-header">
+        <div>
+          <h1>Welcome, Himanshu 👋</h1>
+          <p>Here's an overview of your vehicles and bookings.</p>
+        </div><a class="dashboard-btn" href="book-service.html">Book Service</a>
+      </div>
+      <div class="stats">
+        <div class="stat-card"><a href="vehicles.html"><strong id="customerVehicles">0</strong><span>Total Vehicles</span></a></div>
+        <div class="stat-card"><a href="bookings.html"><strong id="customerBookings">0</strong><span>Total Bookings</span></a></div>
+        <div class="stat-card"><strong id="customerOngoing">0</strong><span>Ongoing Service</span></div>
+        <div class="stat-card"><strong id="customerCompleted">0</strong><span>Completed Services</span></div>
+      </div>
+      <div class="panel table-wrap">
+        <div class="panel-title">
+          <h2>Recent Bookings</h2><a href="bookings.html">View All</a>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Booking ID</th>
+              <th>Vehicle</th>
+              <th>Vehicle No.</th>
+              <th>Service</th>
+              <th>Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="dashboardBookingRows">
+            <tr>
+              <td>BK1001</td>
+              <td>MH12AB1234</td>
+              <td>General Service</td>
+              <td>20 May 2026</td>
+              <td><span class="status completed">Completed</span></td>
+            </tr>
+            <tr>
+              <td>BK1002</td>
+              <td>MH12AB1234</td>
+              <td>Engine Repair</td>
+              <td>28 May 2026</td>
+              <td><span class="status ongoing">Ongoing</span></td>
+            </tr>
+            <tr>
+              <td>BK1003</td>
+              <td>MH14CD5678</td>
+              <td>AC Service</td>
+              <td>30 May 2026</td>
+              <td><span class="status scheduled">Scheduled</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="panel">
+        <div class="panel-title">
+          <h2>My Vehicles</h2><a href="vehicles.html">View All</a>
+        </div>
+        <div class="three-column" id="dashboardVehicleRows">
+          <div class="vehicle-box">
+            <div class="vehicle-icon"><i class="fa-solid fa-car"></i></div>
+            <div><strong>Tata Nexon</strong><span>MH12AB1234 • 2021 • Petrol</span></div>
+          </div>
+          <div class="vehicle-box">
+            <div class="vehicle-icon"><i class="fa-solid fa-car"></i></div>
+            <div><strong>Maruti Swift</strong><span>MH14CD5678 • 2019 • Petrol</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="../js/main.js"></script>
+  <script src="../js/customer.js"></script>
+</body>
+
+</html>

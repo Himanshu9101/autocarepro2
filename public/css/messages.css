@@ -1,0 +1,131 @@
+/* Admin Messages Page */
+
+.messages-page {
+    min-height: calc(100vh - 75px);
+    background: #f5f7fb;
+    padding: 35px 5%;
+}
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.page-heading h1 {
+    margin: 0 0 6px;
+    color: #162b4d;
+    font-size: 28px;
+}
+
+.page-heading p {
+    margin: 0;
+    color: #718096;
+    font-size: 14px;
+}
+
+.messages-card {
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e4e8ef;
+    box-shadow: 0 4px 15px rgba(20, 40, 70, 0.05);
+    overflow: hidden;
+}
+
+.messages-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.messages-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 850px;
+}
+
+.messages-table th {
+    background: #f8fafc;
+    color: #526173;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 16px;
+    border-bottom: 1px solid #e5e9f0;
+}
+
+.messages-table td {
+    padding: 16px;
+    border-bottom: 1px solid #edf0f4;
+    color: #334155;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.messages-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.messages-table tbody tr:hover {
+    background: #fafcff;
+}
+
+.sender-name {
+    display: block;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.sender-email {
+    color: #718096;
+    font-size: 12px;
+}
+
+.message-subject {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.message-text {
+    max-width: 350px;
+    line-height: 1.5;
+    color: #64748b;
+}
+
+.message-date {
+    white-space: nowrap;
+    color: #718096;
+    font-size: 13px;
+}
+
+.delete-message-btn {
+    border: none;
+    background: #fee2e2;
+    color: #dc2626;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.delete-message-btn:hover {
+    background: #fecaca;
+}
+
+.loading-message,
+.empty-message {
+    text-align: center;
+    padding: 35px !important;
+    color: #718096;
+}
+
+@media (max-width: 768px) {
+    .messages-page {
+        padding: 25px 15px;
+    }
+
+    .page-heading h1 {
+        font-size: 23px;
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+  <title>Book Service | AutoCare Pro</title>
+  <link href="../css/style.css" rel="stylesheet" />
+  <link href="../css/dashboard.css" rel="stylesheet" />
+  <link href="../css/responsive.css" rel="stylesheet" />
+  <link href="../css/customer-mechanic.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="navbar">
+    <a class="logo" href="../index.html">
+      <i class="fa-solid fa-car-side"></i>AutoCare <span>Pro</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle">
+      ☰
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="vehicles.html">My Vehicles</a>
+      <a href="book-service.html">Book Service</a>
+      <a href="bookings.html">My Bookings</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+    <a class="login-btn" href="../index.html" onclick="logout();">Logout</a>
+  </header>
+  <main class="dashboard-page">
+    <div class="dashboard-container">
+      <div class="dashboard-header">
+        <div>
+          <h1>Book Service</h1>
+          <p>Select your vehicle, service, date and time.</p>
+        </div>
+      </div>
+      <div class="panel form-card">
+        <form id="bookingForm">
+          <div class="form-group"><label>Select Vehicle</label><select id="vehicle">
+              <option>MH12AB1234 - Tata Nexon</option>
+              <option>MH14CD5678 - Maruti Swift</option>
+            </select></div>
+          <div class="form-group"><label>Select Service</label><select id="service">
+              <option>General Service</option>
+              <option>Engine Repair</option>
+              <option>Brake Service</option>
+              <option>AC Service</option>
+              <option>Car Wash</option>
+            </select></div>
+          <div class="form-row">
+            <div class="form-group"><label>Select Date</label><input id="date" type="date" required/></div>
+          </div><button class="dashboard-btn" type="submit">Confirm Booking</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="../js/main.js"></script>
+  <script src="../js/customer.js"></script>
+</body>
+
+</html>

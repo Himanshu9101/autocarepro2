@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | AutoCare Pro</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+  <header class="navbar"><a class="logo" href="../index.html"><i class="fa-solid fa-car-side"></i> AutoCare
+      <span>Pro</span></a>
+    <nav class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="users.html">Users</a>
+      <a href="mechanics.html">Mechanics</a>
+      <a href="vehicles.html">Vehicles</a>
+      <a href="services.html">Services</a>
+      <a href="bookings.html">Bookings</a>
+      <a href="messages.html">Messages</a>
+    </nav><button class="login-btn" onclick="logout()">Logout</button>
+  </header>
+  <main class="dashboard-page">
+    <div class="dashboard-container">
+      <div class="dashboard-header">
+        <div>
+          <h1>Admin Dashboard</h1>
+          <p>Overview of AutoCare Pro.</p>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat-card"><a href="users.html"><strong id="totalUsers">0</strong><span>Total Users</span></a></div>
+        <div class="stat-card"><a href="mechanics.html"><strong id="totalMechanics">0</strong><span>Mechanics</span></a></div>
+        <div class="stat-card"><a href="vehicles.html"><strong id="totalVehicles">0</strong><span>Vehicles</span></a></div>
+        <div class="stat-card"><a href="bookings.html"><strong id="totalBookings">0</strong><span>Bookings</span></a></div>
+      </div>
+      <div class="panel table-wrap">
+        <div class="panel-title">
+          <h2>Recent Bookings</h2><a href="bookings.html">View All</a>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Booking ID</th>
+              <th>Customer</th>
+              <th>Vehicle</th>
+              <th>Service</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="recentBookings">
+            <tr>
+              <td colspan="5">Loading...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="panel table-wrap">
+        <div class="panel-title">
+          <h2>Services</h2><a href="services.html">Manage Services</a>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="recentServices">
+            <tr>
+              <td colspan="4">Loading...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <script src="../js/main.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+
+</html>

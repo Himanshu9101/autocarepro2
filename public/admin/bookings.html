@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+  <title>Manage Bookings | AutoCare Pro</title>
+  <link href="../css/style.css" rel="stylesheet" />
+  <link href="../css/dashboard.css" rel="stylesheet" />
+  <link href="../css/responsive.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="navbar">
+    <a class="logo" href="../index.html">
+      <i class="fa-solid fa-car-side"></i>AutoCare<span>Pro</span>
+    </a>
+    <nav class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="users.html">Users</a>
+      <a href="mechanics.html">Mechanics</a>
+      <a href="vehicles.html">Vehicles</a>
+      <a href="services.html">Services</a>
+      <a href="bookings.html">Bookings</a><a href="messages.html">Messages</a>
+    </nav>
+    <a class="login-btn" href="../index.html" onclick="logout();">Logout</a>
+  </header>
+  <main class="dashboard-page">
+    <div class="dashboard-container">
+      <div class="dashboard-header">
+        <div>
+          <h1>Manage Bookings</h1>
+          <p>View and manage customer bookings.</p>
+        </div>
+      </div>
+      <div class="search-cont">
+        <form>
+          <input type="text" id="search-input" maxlength="50" placeholder="Search booking...">
+
+          <button type="submit" id="search-btn">
+            Search
+          </button>
+        </form>
+      </div>
+      <div class="panel table-wrap">
+        <table class="data-table">
+          <tr>
+            <th>Booking ID</th>
+            <th>Customer</th>
+            <th>Vehicle</th>
+            <th>Service</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+          <tbody id="bookingContainer">
+            <tr>
+              <td>BK1002</td>
+              <td>Himanshu Mhatre</td>
+              <td>MH12AB1234</td>
+              <td>Engine Repair</td>
+              <td>28 May 2026</td>
+              <td><span class="status ongoing">Ongoing</span></td>
+              <td><a class="small-btn">View</a></td>
+            </tr>
+            <tr>
+              <td>BK1003</td>
+              <td>Rohit Sharma</td>
+              <td>MH01EF9012</td>
+              <td>AC Service</td>
+              <td>30 May 2026</td>
+              <td><span class="status scheduled">Scheduled</span></td>
+              <td><a class="small-btn">View</a></td>
+            </tr>
+            <tr>
+              <td>BK1004</td>
+              <td>Sneha Jadhav</td>
+              <td>MH14CD5678</td>
+              <td>Brake Service</td>
+              <td>30 May 2026</td>
+              <td><span class="status pending">Pending</span></td>
+              <td><a class="small-btn">View</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <script src="../js/main.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+
+</html>
