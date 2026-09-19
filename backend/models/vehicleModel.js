@@ -26,7 +26,7 @@ async function all() {
   return rows;
 }
 
-async function byUser(userId) {
+async function byId(userId) {
   const [rows] = await db.execute(
     `SELECT * FROM vehicles
      WHERE user_id=? AND is_deleted=FALSE
