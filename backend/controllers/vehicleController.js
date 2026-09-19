@@ -1,4 +1,5 @@
 const vehicles = require("../models/vehicleModel");
+const cloudinary = require("../config/cloudinary");
 
 async function mine(req, res) {
   try {
@@ -96,6 +97,26 @@ async function remove(req, res) {
     console.error(e);
     res.status(500).json({ message: "Server error" });
   }
+}
+
+function uploadToCloudinary(buffer) {
+  return new Promise((resolve, reject) => {
+    const stream = cloudinary.uploader.upload_stream(
+      {
+        folder: "autocare/vehicles",
+        resource_type: "image"
+      },
+      (error, result) => {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(result);
+        }
+      }
+    );
+
+    stream.end(buffer);
+  });
 }
 
 module.exports = { mine, all, add, update, remove };
