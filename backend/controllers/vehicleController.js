@@ -43,9 +43,14 @@ async function add(req, res) {
         message: "Invalid vehicle registration number."
       });
     }
-    const vehicleImage = req.file
-      ? "/uploads/vehicles/" + req.file.filename
-      : null;
+    
+    let vehicleImage = null;
+
+    if (req.file) {
+      const result = await uploadToCloudinary(req.file.buffer);
+      vehicleImage = result.secure_url;
+    }
+    
     const id = await vehicles.create({
       userId: req.user.id,
       registrationNo: registration,
