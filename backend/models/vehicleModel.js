@@ -2,7 +2,12 @@ const db = require("../config/database");
 
 async function byUser(userId) {
   const [rows] = await db.execute(
-    "SELECT * FROM vehicles WHERE user_id=? ORDER BY vehicle_id DESC", [userId]);
+    `SELECT * FROM vehicles
+     WHERE user_id=? AND is_deleted=FALSE
+     ORDER BY vehicle_id DESC`,
+    [userId]
+  );
+
   return rows;
 }
 
@@ -26,15 +31,13 @@ async function all() {
   return rows;
 }
 
-async function byId(userId) {
-  const [rows] = await db.execute(
-    `SELECT * FROM vehicles
-     WHERE user_id=? AND is_deleted=FALSE
-     ORDER BY vehicle_id DESC`,
-    [userId]
-  );
-
-  return rows;
+async function byId(id, userId = null) {
+  let sql = "SELECT * FROM vehicles WHERE vehicle_id=?";
+  const p = [id];
+  if (userId !== null) { sql += " AND user_id=?"; 
+  p.push(userId); }
+  const [rows] = await db.execute(sql, p);
+  return rows[0];
 }
 
 async function create(d) {
