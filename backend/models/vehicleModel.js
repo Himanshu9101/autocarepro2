@@ -26,13 +26,15 @@ async function all() {
   return rows;
 }
 
-async function byId(id, userId = null) {
-  let sql = "SELECT * FROM vehicles WHERE vehicle_id=?";
-  const p = [id];
-  if (userId !== null) { sql += " AND user_id=?"; 
-  p.push(userId); }
-  const [rows] = await db.execute(sql, p);
-  return rows[0];
+async function byUser(userId) {
+  const [rows] = await db.execute(
+    `SELECT * FROM vehicles
+     WHERE user_id=? AND is_deleted=FALSE
+     ORDER BY vehicle_id DESC`,
+    [userId]
+  );
+
+  return rows;
 }
 
 async function create(d) {
@@ -61,7 +63,13 @@ async function update(id, userId, d) {
 }
 
 async function remove(id, userId) {
-  const [r] = await db.execute("DELETE FROM vehicles WHERE vehicle_id=? AND user_id=?", [id, userId]);
+  const [r] = await db.execute(
+    `UPDATE vehicles
+     SET is_deleted=TRUE
+     WHERE vehicle_id=? AND user_id=?`,
+    [id, userId]
+  );
+
   return r.affectedRows;
 }
 
